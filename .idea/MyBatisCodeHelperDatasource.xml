@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="javaMapperPackage" value="com.vip.webuser.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/web-user/src/main/java" />
+        <option name="javaModelPackage" value="com.vip.webuser.domain.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/web-user/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="web-user" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="web-orders">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.vip.orders.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/web-orders/src/main/java" />
+                  <option name="javaModelPacakge" value="com.vip.orders.domain.entity" />
+                  <option name="javaModelPath" value="E:\java\IJIDEA\springboot-shop\web-orders\src\main\java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/web-orders/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/web-orders/src/main/java" />
+                  <option name="xmlPackage" value="mappers" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/web-orders/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="web-shopcar">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.vip.shopcar.mapper" />
+                  <option name="javaMapperPath" value="E:\java\IJIDEA\springboot-shop\web-shopcar\src\main\java" />
+                  <option name="javaModelPacakge" value="com.vip.shopcar.domain.entity" />
+                  <option name="javaModelPath" value="E:\java\IJIDEA\springboot-shop\web-shopcar\src\main\java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/web-shopcar/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/web-shopcar/src/main/java" />
+                  <option name="xmlPackage" value="mappers" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/web-shopcar/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="web-user">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.vip.webuser.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/web-user/src/main/java" />
+                  <option name="javaModelPacakge" value="com.vip.webuser.domain.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/web-user/src/main/java" />
+                  <option name="xmlPackage" value="mappers" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/web-user/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="day9.19:goods">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="goods_id" />
+                  <option name="javaModelName" value="Goods" />
+                  <option name="moduleName" value="web-shopcar" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="day9.19:orders">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="oid" />
+                  <option name="javaModelName" value="Orders" />
+                  <option name="moduleName" value="web-orders" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="day9.19:review">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="rid" />
+                  <option name="javaModelName" value="Review" />
+                  <option name="moduleName" value="web-orders" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="day9.19:shop_car">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="shop_car_id" />
+                  <option name="javaModelName" value="ShopCar" />
+                  <option name="moduleName" value="web-shopcar" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="day9.19:user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="uid" />
+                  <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="web-user" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="mappers" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/web-user/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

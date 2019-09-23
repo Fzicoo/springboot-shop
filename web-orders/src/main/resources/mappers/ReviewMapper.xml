@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.orders.mapper.ReviewMapper">
+  <resultMap id="BaseResultMap" type="com.vip.orders.domain.vo.ReviewVo">
+    <!--@mbg.generated-->
+    <id column="rid" jdbcType="INTEGER" property="rid" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="shop_car_id" jdbcType="INTEGER" property="shopCarId" />
+    <result column="rw_detail" jdbcType="VARCHAR" property="rwDetail" />
+    <result column="rw_img" jdbcType="VARCHAR" property="rwImg" />
+    <result column="rw_time" jdbcType="TIMESTAMP" property="rwTime" />
+    <result column="rw_status" jdbcType="INTEGER" property="rwStatus" />
+
+    <collection property="goodsList" resultMap="com.vip.orders.mapper.GoodsMapper.BaseResultMap">
+
+    </collection>
+
+  </resultMap>
+
+  <select id="reByUid" resultMap="BaseResultMap">
+    select *
+    from review r
+        left join goods g on g.goods_id = r.goods_id
+    where r.uid = #{uid}
+  </select>
+
+</mapper>

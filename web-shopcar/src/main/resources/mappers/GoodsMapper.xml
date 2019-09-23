@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.shopcar.mapper.GoodsMapper">
+  <resultMap id="BaseResultMap" type="com.vip.shopcar.domain.entity.Goods">
+    <!--@mbg.generated-->
+    <id column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="oid" jdbcType="INTEGER" property="oid" />
+    <result column="shop_car_id" jdbcType="INTEGER" property="shopCarId" />
+    <result column="goods_img" jdbcType="VARCHAR" property="goodsImg" />
+    <result column="rid" jdbcType="INTEGER" property="rid" />
+    <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+    <result column="goods_type" jdbcType="VARCHAR" property="goodsType" />
+    <result column="goods_price" jdbcType="DECIMAL" property="goodsPrice" />
+    <result column="goods_detail" jdbcType="VARCHAR" property="goodsDetail" />
+    <result column="goods_status" jdbcType="INTEGER" property="goodsStatus" />
+  </resultMap>
+
+</mapper>

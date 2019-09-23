@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vip.shopcar.mapper.ShopCarMapper">
+  <resultMap id="BaseResultMap" type="com.vip.shopcar.domain.vo.ShopCarVo">
+    <!--@mbg.generated-->
+    <id column="shop_car_id" jdbcType="INTEGER" property="shopCarId" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+
+    <collection property="goodsList" resultMap="com.vip.shopcar.mapper.GoodsMapper.BaseResultMap">
+
+    </collection>
+
+  </resultMap>
+    <select id="findByUid" resultMap="BaseResultMap">
+      select *
+      from shop_car s
+        left join goods g on g.goods_id = s.goods_id
+      where s.uid = #{uid} and s.status = 1;
+    </select>
+    <select id="findByGid" resultMap="BaseResultMap">
+        select *
+        from shop_car s
+        where s.uid = #{uid} and s.goods_id = #{gid} and s.status = 1;
+    </select>
+    <update id="updateShopCar">
+        update shop_car
+        set num =num + #{num}
+        where uid = #{uid} and goods_id = #{gid}
+    </update>
+    <insert id="addShopCar">
+        insert into shop_car (uid, goods_id, num)
+        values (#{uid},#{gid},#{num});
+    </insert>
+    <update id="updateNum">
+        update shop_car
+        set
+        <if test="op != null and op == 1">
+            num = num + 1
+        </if>
+
+        <if test="op != null and op == 2">
+            num = num - 1
+        </if>
+        where goods_id = #{gid}
+    </update>
+    <update id="deleteShopCar">
+        update shop_car
+        set status = -1
+        where goods_id = #{gid}
+    </update>
+
+</mapper>
